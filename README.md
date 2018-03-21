@@ -83,3 +83,7 @@ $ curl http://127.0.0.1:11223/mget/100/simple
     ]
 }
 ```
+## 部署
+
+LVS -> Nginx -> guuid-server
+
