@@ -87,3 +87,22 @@ $ curl http://127.0.0.1:11223/mget/100/simple
 
 LVS -> Nginx -> guuid-server
 
+<img src="https://raw.githubusercontent.com/dreamans/guuid/master/docs/guuid-server.png">
+
+* Configure Nginx
+```
+upstream guuid_server {
+    server localhost:11211;
+    server localhost:11212;
+    server localhost:11213;
+}
+
+server {
+    listen          80;
+    server_name     localhost;
+
+    location / {
+        proxy_pass      http://guuid_server;
+    }
+}
+```
