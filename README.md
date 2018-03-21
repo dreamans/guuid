@@ -1,6 +1,12 @@
-## Guuid
+<h3 align="center">Guuid</h3>
+<p align="center">Guuid 是一款由 Go 语言开发的 UUID 生成服务.</p>
+<p align="center">
+    <a href="https://travis-ci.org/dreamans/guuid"><img src="https://travis-ci.org/dreamans/guuid.svg?branch=master"></a>
+</p>
 
-Guuid 是一款由 Go 语言开发的 UUID 生成服务
+---
+
+
 
 UUID(Universally Unique Identifier)全局唯一标识符,是指在一台机器上生成的数字，它保证对在同一时空中的所有机器都是唯一的。
 
