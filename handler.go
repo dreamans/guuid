@@ -104,8 +104,8 @@ func createMultiUUID(num int, isSimple bool) *ResponseData {
     uuidChan := make(chan string, num)
 
     go func(isSimple bool, num int) {
+        index := 0
         for {
-            index := 0
             go func(isSimple bool) {
                 if isSimple {
                     uuidChan <- createSimpleUUID()
