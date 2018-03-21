@@ -6,14 +6,17 @@ UUID(Universally Unique Identifier)全局唯一标识符,是指在一台机器�
 
 Guuid使用了服务器主机名、运行的进程ID、时间戳、随机数、时序元素等一系列元素来保证生成UUID的唯一性。
 
-UUID 共 128位, 构成: 
-* 1  - 32  主机名&进程ID
+UUID 16 bytes, 构成: 
+* 4 bytes 主机名&进程ID
+* 4 bytes 时间戳
+* 4 bytes 计数器
+* 4 bytes 随机数
 
 ## 安装
 
 ```
-$ go get-u github.com/dreamans/guuid/guuid-server
-$ cd cd $GOPATH/src/github.com/dreamans/guuid/guuid-server
+$ go get -u github.com/dreamans/guuid/guuid-server
+$ cd $GOPATH/src/github.com/dreamans/guuid/guuid-server
 $ go install
 ```
 
